@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="/css/board/index.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<div th:replace="~{ /header.html :: header }"> </div> <!-- 헤더 html 플러그인  -->
+
+<div class="container">
+
+    <div class="infobox">
+        <span class="mimgbox"> 작성자 프로필 들어가는 곳 </span>
+        <span class="midbox" > 작성자 아이디 </span>
+        <span class="bviewbox"> 조회수 </span>
+        <span class="cdatebox"> 작성일 </span>
+    </div>
+
+    <div class="btitle"> 게시물 제목 </div>
+    <div class="bcontent"> 게시물 내용 </div>
+
+    <div>
+        <textarea class="rcontentInput form-control"> </textarea>
+        <button class="btn btn-primary" onclick="onReplyWrite()" type="button"> 댓글 게시 </button>
+    </div>
+
+    <div class="replybox mt-5">
+
+    </div>
+
+</div>
+
+<script src="/js/board/view.js"></script>
+
+</body>
+</html>
