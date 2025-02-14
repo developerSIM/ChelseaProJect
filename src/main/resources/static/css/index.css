@@ -11,4 +11,17 @@
 
 .pointbox{ color: red }
 
- my-bg-div
+.body1 {
+background-image: url(/img/mainbanner2.png);
+background-repeat: no-repeat;
+background-position: center top;
+background-size: cover;
+}
+
+
+.body2 {
+backgroun-image: url(/img)
+
+
+
+}

@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
 </head>
 <body>
-
+ <div class="body1">
     <div th:replace="~{ /header.html :: header }"></div>
 
     <!-- 부트스트랩의 로그인 예시 붙여넣기 -->
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5 ">
         <div class="row align-items-center g-lg-5 py-5">
             <!-- 왼쪽 구역 -->
             <div class="col-lg-7 text-center text-lg-start">
                 <div class="my-bg-div">
-                <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3"> Chelsea FC</h1>
+                <h1 class="display-4 fw-bold lh-1 mb-3 text-white"> Chelsea FC</h1>
 
                 <p class="DS_SCH">
                     <img src="/img/chelsea.png" alt="">
                 </p>
                 </div>
-                <p class="col-lg-10 fs-4"> 첼시의 모든 것</p>
+                <p class="col-lg-10 fs-4 text-white"> 첼시의 모든 것</p>
             </div>
 
 
@@ -48,6 +49,6 @@
     </div>
 
     <script src="/js/member/login.js"></script>
-
+    </div>
 </body>
 </html>
