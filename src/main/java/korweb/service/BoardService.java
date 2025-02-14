@@ -59,7 +59,7 @@ public class BoardService {
     } // f end
 
     // [2] 게시물 전체 조회
-    public PageDto boardFindAll(  int cno , int page ){
+    public PageDto boardFindAll(  int cno , int page , String key , String keyword ){
         System.out.println( "카테고리번호 : " + cno ); // 카테고리 번호
         System.out.println( "페이지 " + page ); // 페이지번호
         // 페이징처리 방법 : 1.SQL 2.라이브러리(*JPA*)
@@ -72,7 +72,8 @@ public class BoardService {
         // (1) 모든 게시물의 엔티티를 조회 + 페이징처리
         // Page< BoardEntity > boardEntityList = boardRepository.findAll( pageable );
         // (1) 특정한 카테고리의 엔티티를 조회 + 페이징처리
-        Page< BoardEntity > boardEntityList = boardRepository.findByCategoryEntity_Cno( cno , pageable );
+        Page< BoardEntity > boardEntityList = boardRepository.findBySearch( cno , pageable , key , keyword );
+
         System.out.println( boardEntityList ); // 확인용 출력
 
         // * cno 이용한 동일한 cno의 게시물정보 찾기.

@@ -9,9 +9,17 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 @Repository
-public interface BoardRepository extends JpaRepository<BoardEntity, Integer> {
+public interface BoardRepositor extends JpaRepository<BoardEntity, Integer> {
+
+    // * 카테고리별 ( 1.전체조회[keyword존재하지 않으면] 2.제목btitle 검색 3.내용bcontent 검색 ) + 페이징처리
+    @Query( value = "select * from board where cno = :cno and " +
+            " if( :keyword = '' , true  , " +           // 전체검색 [조건1]
+            " if( :key = 'btitle' , btitle like %:keyword% , " + // 제목검색 [조건2]
+            " if( :key = 'bcontent' , bcontent like %:keyword% , true ) ) ) " , nativeQuery = true ) // 내용검색 [조건3]
+    Page< BoardEntity > findBySearch( int cno , String key , String keyword , Pageable pageable );
+
+} // f end
 
     // + JPA함수명은 무조건 카멜표기법( 낙타 등 ) 첫글자 소문자로 시작 , 두번째 단어의 첫글자를 대문자.
     // - mystudentlist -> myStudentList(카멜표기법)
