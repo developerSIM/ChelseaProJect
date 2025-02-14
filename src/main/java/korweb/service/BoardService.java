@@ -69,10 +69,12 @@ public class BoardService {
 
         // (1) 모든 게시물의 엔티티를 조회
         // List< BoardEntity > boardEntityList = boardRepository.findAll(  );
-        // (1) 모든 게시물의 엔티티를 조회 + 페이징처리
+        // (2) 모든 게시물의 엔티티를 조회 + 페이징처리
         // Page< BoardEntity > boardEntityList = boardRepository.findAll( pageable );
-        // (1) 특정한 카테고리의 엔티티를 조회 + 페이징처리
-        Page< BoardEntity > boardEntityList = boardRepository.findBySearch( cno , pageable , key , keyword );
+        // (3) 특정한 카테고리의 엔티티를 조회 + 페이징처리
+        // Page< BoardEntity > boardEntityList = boardRepository.findByCategoryEntity_Cno( cno , pageable );
+        // (4) 특정한 카테고리의 키워드 검색 조회 + 페이징처리
+        Page< BoardEntity > boardEntityList = boardRepository.findBySearch( cno , key , keyword , pageable );
 
         System.out.println( boardEntityList ); // 확인용 출력
 
