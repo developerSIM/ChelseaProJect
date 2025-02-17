@@ -192,7 +192,7 @@ public class MemberService {
         pointEntity.setMemberEntity( memberEntity ); // 지급받는 회원엔티티 대입
 
         PointEntity saveEntity = pointRepository.save( pointEntity  );
-        if( saveEntity.getPno() > 0 ){return true; }
+        if( saveEntity.getPno() > 0 ){ return true; }
         else{ return false; }
     } // f end
 
