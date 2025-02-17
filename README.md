@@ -14,8 +14,8 @@
 + **진금오** : 백엔드
 
 ## 개발환경
-* Version : Java 17
-* IDE : IntelliJ
+* **Version** : Java 17
+* **IDE** : IntelliJ
 
 ## 주요 기능 
 * 회원가입 및 로그인 
