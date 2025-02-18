@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:replace = "~{ /header.html :: header }"></div>
+<div class="container">
+
+    <h3>[API활용3] 부평구_맛있는 집(맛집) 현황 </h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>소재지</th>
+            <th>업 소 명</th>
+            <th>업태</th>
+            <th>전화번호</th>
+            <th>지정메뉴</th>
+        </tr>
+        </thead>
+        <tbody id="boardTable2">
+
+
+
+        </tbody>
+
+
+
+
+
+
+
+        </thead>
+
+
+
+
+
+
+
+    </table>
+
+
+
+
+
+
+
+
+    <h3>[API활용3] 부평구_맛있는 집(맛집) 현황 </h3>
+    <input type="text" id="부평맛집"/>
+    <button type="button" oneclick="api3()"> 검색 </button>
+    <div 조회 결과 : <span id="결과구역1"> </span> </div>
+
+
+    <h3> [API활용2] 사업자 상태 조회  </h3>
+    <input type="text" id="사업자번호입력상자" />
+    <button type="button" onclick="api2()"> 검색 </button>
+    <div> 조회 결과 : <span id="결과구역"> </span> </div>
+
+    <h3> [API활용1] 부평구 인구 현황 </h3>
+    <table class="table">
+        <thead>
+        <tr>
+            <th> 동별 </th> <th> 세대수 </th>
+            <th> 인구수(계)</th> <th>인구수(남)</th> <th>인구수(여)</th>
+        </tr>
+        </thead>
+        <tbody id="boardTable1">
+
+        </tbody>
+    </table>
+</div>
+
+<script src="/js/api/api1.js"></script>
+
+</body>
+</html>
